@@ -14,46 +14,14 @@
 
         combo_dsklg {
             timeout-ms = <100>;
-            key-positions = <24 52>;
+            key-positions = <54 57>;
             layers = <0>;
-            bindings = <&kp LGUI>;
-        };
-    };
-
-    behaviors {
-        fofunc: four_ffour {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N4>, <&kp F4>;
-
-            mods = <(MOD_LALT|MOD_RALT)>;
+            bindings = <&mo 3>;
         };
 
-        sleft: s_left {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp S>, <&kp LEFT>;
-
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
-        fright: f_right {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp F>, <&kp RIGHT>;
-
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp>, <&mo>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <600>;
-            require-prior-idle-ms = <100>;
+        alt_combo {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <54 28>;
         };
     };
 
@@ -69,11 +37,11 @@
             // 52                    |ENT RS|  ALT | SPACE|DELETE LW|  |ENTER RS| BSPC |  ] LW | RGUI  |                        59
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3        &kp NUMBER_4  &kp N5                                                         &kp N6     &kp N7  &kp N8     &kp N9   &kp N0         &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E         &kp R         &kp T                                                          &kp Y      &kp U   &kp I      &kp O    &kp P          &kp LEFT_BRACKET
-&kp LSHFT  &kp A   &kp S   &kp D         &kp F         &kp G                     &kp C_MUTE        &kp C_PLAY_PAUSE   &kp H      &kp J   &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp LCTRL  &kp Z   &kp X   &kp C         &kp V         &kp B                     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH       &mt RCTRL BSLH
-                           &kp LEFT_ALT  &kp LEFT_WIN  &new_behavior LEFT_ALT 1  &kp SPACE         &kp BACKSPACE      &kp ENTER  &mo 2   &kp ENTER
+&kp ESC           &kp N1  &kp N2  &kp N3        &kp NUMBER_4           &kp N5                                       &kp N6       &kp N7  &kp N8     &kp N9   &kp N0         &kp MINUS
+&kp TAB           &kp Q   &kp W   &kp E         &kp R                  &kp T                                        &kp Y        &kp U   &kp I      &kp O    &kp P          &kp LEFT_BRACKET
+&kp LSHFT         &kp A   &kp S   &kp D         &kp F                  &kp G   &kp C_MUTE        &kp C_PLAY_PAUSE   &kp H        &kp J   &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&kp LEFT_CONTROL  &kp Z   &kp X   &kp C         &kp V                  &kp B   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N        &kp M   &kp COMMA  &kp DOT  &kp FSLH       &mt RCTRL BSLH
+                                  &kp LEFT_ALT  &mt LEFT_ALT LEFT_WIN  &mo 1   &kp SPACE         &kp BACKSPACE      &lt 2 ENTER  &none   &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -88,11 +56,11 @@
             //                     |  F11 |      |      |        |  |       |      |       |  F12  |
 
             bindings = <
-&trans         &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)                      &trans     &trans              &trans     &trans  &trans  &trans
-&trans         &trans            &kp LC(C)         &kp UP            &kp LC(END)       &kp LS(LG(S))                   &kp EQUAL  &kp PLUS            &kp MINUS  &trans  &trans  &trans
-&kp BACKSPACE  &kp LC(A)         &kp LEFT          &kp DOWN          &kp RIGHT         &kp LA(LS(S))  &trans  &trans   &trans     &kp LA(LEFT_SHIFT)  &trans     &trans  &trans  &trans
-&kp ENTER      &kp LC(Z)         &kp MINUS         &kp LC(LS(TAB))   &kp LC(TAB)       &kp LC(T)      &trans  &trans   &kp COLON  &kp QMARK           &trans     &trans  &trans  &trans
-                                                   &trans            &trans            &trans         &trans  &kp DEL  &trans     &trans              &trans
+&trans         &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)                      &trans            &trans              &trans     &trans  &trans  &trans
+&trans         &trans            &kp LC(C)         &kp UP            &kp LC(V)         &kp LS(LG(S))                   &kp EQUAL         &kp PLUS            &kp MINUS  &trans  &trans  &trans
+&kp BACKSPACE  &kp LC(A)         &kp LEFT          &kp DOWN          &kp RIGHT         &kp LA(LS(S))  &trans  &trans   &trans            &kp LA(LEFT_SHIFT)  &trans     &trans  &trans  &trans
+&kp ENTER      &kp LC(Z)         &none             &kp LC(LS(TAB))   &kp LC(TAB)       &kp LC(T)      &trans  &trans   &kp LS(NUMBER_6)  &kp LS(N7)          &trans     &trans  &trans  &trans
+                                                   &trans            &trans            &trans         &trans  &kp DEL  &trans            &trans              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_NEXT C_PREV>;
