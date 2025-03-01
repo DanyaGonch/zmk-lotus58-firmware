@@ -38,6 +38,7 @@
             tapping-term-ms = <180>;
             flavor = "balanced";
             retro-tap;
+            require-prior-idle-ms = <150>;
         };
     };
 
