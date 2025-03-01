@@ -35,10 +35,9 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <180>;
+            flavor = "balanced";
             retro-tap;
-            require-prior-idle-ms = <200>;
         };
     };
 
