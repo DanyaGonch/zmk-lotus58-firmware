@@ -55,11 +55,11 @@
             // 52                    |ENT RS|  ALT | SPACE|DELETE LW|  |ENTER RS| BSPC |  ] LW | RGUI  |                        59
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3        &kp NUMBER_4  &kp N5                                           &kp N6     &kp N7  &kp N8     &kp N9   &kp N0         &kp MINUS
-&kp TAB    &kp Q   &kp W   &kp E         &kp R         &kp T                                            &kp Y      &kp U   &kp I      &kp O    &kp P          &kp LEFT_BRACKET
-&kp LSHFT  &kp A   &kp S   &kp D         &kp F         &kp G   &kp C_MUTE            &kp C_PLAY_PAUSE   &kp H      &kp J   &kp K      &kp L    &kp SEMICOLON  &kp SQT
-&kp LCTRL  &kp Z   &kp X   &kp C         &kp V         &kp B   &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH       &mt RCTRL BSLH
-                           &kp LEFT_ALT  &mo 2         &mo 1   &layer_space 3 SPACE  &kp BACKSPACE      &kp ENTER  &trans  &trans
+&kp ESC    &kp N1  &kp N2  &kp N3        &kp NUMBER_4  &kp N5                                           &kp N6     &kp N7           &kp N8     &kp N9   &kp N0         &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp E         &kp R         &kp T                                            &kp Y      &kp U            &kp I      &kp O    &kp P          &kp LEFT_BRACKET
+&kp LSHFT  &kp A   &kp S   &kp D         &kp F         &kp G   &kp C_MUTE            &kp C_PLAY_PAUSE   &kp H      &kp J            &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&kp LCTRL  &kp Z   &kp X   &kp C         &kp V         &kp B   &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp N      &kp M            &kp COMMA  &kp DOT  &kp FSLH       &mt RCTRL BSLH
+                           &kp LEFT_ALT  &mo 2         &mo 1   &layer_space 3 SPACE  &kp BACKSPACE      &kp ENTER  &kp RIGHT_SHIFT  &trans
             >;
 
             sensor-bindings =
@@ -76,11 +76,11 @@
             //                     |  F11 |      |      |        |  |       |      |       |  F12  |
 
             bindings = <
-&kp LG(D)      &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)                                     &trans     &trans              &trans     &trans  &trans  &trans
-&kp DEL        &kp LC(W)         &kp LC(C)         &kp UP            &kp LC(V)         &kp LS(LG(S))                                  &trans     &trans              &trans     &trans  &trans  &trans
-&kp ENTER      &kp LC(A)         &kp LEFT          &kp DOWN          &kp RIGHT         &kp LA(LS(S))  &trans          &msc MOVE_X(5)  &kp COMMA  &kp LA(LEFT_SHIFT)  &kp COLON  &trans  &trans  &trans
-&kp BACKSPACE  &kp LC(Z)         &bt BT_CLR        &kp LC(LS(TAB))   &kp LC(TAB)       &kp LC(T)      &bt BT_CLR_ALL  &trans          &kp DOT    &kp QUESTION        &trans     &trans  &trans  &trans
-                                                   &trans            &trans            &trans         &trans          &trans          &trans     &trans              &trans
+&kp LG(D)      &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)                                     &trans           &trans              &trans     &trans  &trans  &trans
+&kp DEL        &kp LC(W)         &kp LC(C)         &kp UP            &kp LC(V)         &kp LS(LG(S))                                  &trans           &trans              &trans     &trans  &trans  &trans
+&kp ENTER      &kp LC(A)         &kp LEFT          &kp DOWN          &kp RIGHT         &kp LA(LS(S))  &trans          &msc MOVE_X(5)  &kp COMMA        &kp LA(LEFT_SHIFT)  &kp COLON  &trans  &trans  &trans
+&kp BACKSPACE  &kp LC(Z)         &bt BT_CLR        &kp LC(LS(TAB))   &kp LC(TAB)       &kp LC(T)      &bt BT_CLR_ALL  &trans          &kp DOT          &kp QUESTION        &trans     &trans  &trans  &trans
+                                                   &trans            &trans            &trans         &trans          &trans          &kp RIGHT_SHIFT  &trans              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_NEXT C_PREV>;
