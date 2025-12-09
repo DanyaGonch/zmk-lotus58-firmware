@@ -13,9 +13,9 @@
     combos {
         compatible = "zmk,combos";
 
-        alt_combo {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <54 28>;
+        momentlayer {
+            bindings = <&mo 4>;
+            key-positions = <57 54>;
         };
     };
 
@@ -76,11 +76,11 @@
             //                     |  F11 |      |      |        |  |       |      |       |  F12  |
 
             bindings = <
-&kp LG(D)      &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)                                     &trans           &trans              &trans     &trans  &trans  &trans
-&kp DEL        &kp LC(W)         &kp LC(C)         &kp UP            &kp LC(V)         &kp LS(LG(S))                                  &trans           &trans              &trans     &trans  &trans  &trans
-&kp ENTER      &kp LC(A)         &kp LEFT          &kp DOWN          &kp RIGHT         &kp LA(LS(S))  &trans          &msc MOVE_X(5)  &kp COMMA        &kp LA(LEFT_SHIFT)  &kp COLON  &trans  &trans  &trans
-&kp BACKSPACE  &kp LC(Z)         &bt BT_CLR        &kp LC(LS(TAB))   &kp LC(TAB)       &kp LC(T)      &bt BT_CLR_ALL  &trans          &kp DOT          &kp QUESTION        &trans     &trans  &trans  &trans
-                                                   &trans            &trans            &trans         &trans          &trans          &kp RIGHT_SHIFT  &trans              &trans
+&kp LG(D)      &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)                                     &trans     &trans              &trans     &trans  &trans  &trans
+&kp DEL        &kp LC(W)         &kp LC(C)         &kp UP            &kp LC(V)         &kp LS(LG(S))                                  &trans     &trans              &trans     &trans  &trans  &trans
+&kp ENTER      &kp LC(A)         &kp LEFT          &kp DOWN          &kp RIGHT         &kp LA(LS(S))  &trans          &msc MOVE_X(5)  &kp COMMA  &kp LA(LEFT_SHIFT)  &kp COLON  &trans  &trans  &trans
+&kp BACKSPACE  &kp LC(Z)         &kp LC(LS(T))     &kp LC(LS(TAB))   &kp LC(TAB)       &kp LC(T)      &bt BT_CLR_ALL  &trans          &kp DOT    &kp LS(N7)          &trans     &trans  &trans  &trans
+                                                   &trans            &trans            &trans         &trans          &kp LEFT_ALT    &kp LCTRL  &trans              &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_NEXT C_PREV>;
@@ -96,7 +96,7 @@
 
             bindings = <
 &none   &none   &none   &none   &none         &none                   &trans  &trans  &trans  &trans  &sys_reset  &bootloader
-&trans  &trans  &trans  &trans  &trans        &trans                  &trans  &trans  &trans  &trans  &trans      &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5        &kp F6                  &trans  &trans  &trans  &trans  &trans      &trans
 &trans  &trans  &trans  &trans  &kp LEFT_WIN  &trans  &trans  &trans  &trans  &trans  &none   &trans  &none       &none
 &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &none   &none   &none   &trans      &trans
                         &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
@@ -112,6 +112,16 @@
 &kp ENTER      &kp LC(ASTERISK)  &kp N4  &kp N5  &kp N6  &kp EQUAL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp BACKSPACE  &kp SLASH         &kp N7  &kp N8  &kp N9  &kp N0     &none   &none   &trans  &trans  &trans  &trans  &trans  &trans
                                          &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans     &trans          &trans                  &trans  &trans          &trans        &trans           &trans  &trans
+&trans  &trans  &trans  &trans     &trans          &trans                  &trans  &trans          &kp UP_ARROW  &trans           &trans  &trans
+&trans  &trans  &trans  &kp LCTRL  &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans     &trans          &trans  &trans  &trans  &trans  &trans          &trans        &trans           &trans  &trans
+                        &trans     &trans          &trans  &trans  &trans  &trans  &trans          &trans
             >;
         };
     };
